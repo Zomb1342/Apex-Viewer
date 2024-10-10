@@ -32,16 +32,8 @@ int main() {
 
     try {
         if (inputType == "integer") {
-            if (size != 4) {
-                std::cout << "Invalid size for integer. Expected 4 bytes." << std::endl;
-                return 1;
-            }
             readMemory<int>(address);
         } else if (inputType == "float") {
-            if (size != 4) {
-                std::cout << "Invalid size for float. Expected 4 bytes." << std::endl;
-                return 1;
-            }
             readMemory<float>(address);
         } else if (inputType == "string") {
             std::string value = ReadString(address, size);
